@@ -1,0 +1,61 @@
+#root {
+  width: 100%;
+  height: 100%;
+  background: #38404B;
+}
+
+.App {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 7.4rem;
+}
+
+.appForm {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.appFormInput {
+  width: 90%;
+  height: 5rem;
+  border-right: none;
+  border-color: #171718fc;
+  border-top-left-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  background: #38404B;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: rgba(148, 173, 207, 0.7);
+  padding: 2rem 0 2.1rem 2.8rem;
+}
+
+.appFormInput:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.appFormButton {
+  width: 10%;
+  height: 5rem;
+  border-left: none;
+  border-color: #171718fc;
+  background: #38404B;
+  border-top-right-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+  cursor: pointer;
+}
+
+.appTarefas {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 6rem auto 0 auto;
+}

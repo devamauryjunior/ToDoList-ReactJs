@@ -1,0 +1,28 @@
+.Tarefas {
+    width: 30%;
+    height: 5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background: #38404B;
+    box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
+    border-radius: 16px;
+}
+
+.radioTarefa {
+    margin-inline: 2.7rem;
+    cursor: pointer;
+}
+
+.radioTarefa[type=radio] {
+    border: 0px;
+    width: 1.8rem;
+    height: 2em;
+}
+
+.spanTarefa {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #94ADCF;
+}
