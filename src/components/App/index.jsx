@@ -7,7 +7,6 @@ import TarefasConcluidas from '../TarefasConcluidas';
 function App() {
   const [novaTarefa, setNovaTarefa] = useState("");
   const [tarefas, setTarefas] = useState([]);
-
   const [tarefasConcluidas, setTarefasConcluidas] = useState([]);
 
   const handleTarefasConcluidas = (tarefa) => setTarefasConcluidas(prevState => [...prevState, tarefa]);
@@ -34,16 +33,12 @@ function App() {
         {
           tarefas.map((tarefa, idx) => <Tarefa key={idx} tarefa={tarefa} handleTarefaConcluida={handleTarefasConcluidas}/>)
         }
-        {/* {
-          tarefasConcluidas.map((concluidas, idx) => <TarefasConcluidas key={idx} taarefaConcluida={concluidas} />)
-        } */}
       </div>
       <div className="appTarefasConcluidas">
-        <h1>Completed</h1>
-        <TarefasConcluidas taarefaConcluida={"Nodejs"} />
-        <TarefasConcluidas taarefaConcluida={"python"} />
-        <TarefasConcluidas taarefaConcluida={"c"} />
-        <TarefasConcluidas taarefaConcluida={"reactjs"} />
+        <h1 className='appTarefasConcluidas-title'>Completed</h1>
+        {
+          tarefasConcluidas.map((concluidas, idx) => <TarefasConcluidas key={idx} taarefaConcluida={concluidas} />)
+        }
       </div>
     </div>
   )
