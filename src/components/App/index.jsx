@@ -12,10 +12,15 @@ function App() {
 
   const handleTarefasConcluidas = (tarefa) => setTarefasConcluidas(prevState => [...prevState, tarefa]);
 
+  const handleExistsInTarefas = () => {
+    
+    console.log(existsInTarefas);
+  }
+
   return (
     <div className="App">
       <form action="#" className='appForm' onSubmit={event => {
-        setTarefas(prevState => [...prevState, novaTarefa]);
+        !tarefas.includes(novaTarefa) ? setTarefas(prevState => [...prevState, novaTarefa]) : window.alert("Tarefa existente, adicione outro :)");
         event.preventDefault();
       }}>
         <input 
