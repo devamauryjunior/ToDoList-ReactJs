@@ -7,6 +7,7 @@ import TarefasConcluidas from '../TarefasConcluidas';
 function App() {
   const [novaTarefa, setNovaTarefa] = useState("");
   const [tarefas, setTarefas] = useState([]);
+  
   const [tarefasConcluidas, setTarefasConcluidas] = useState([]);
 
   const handleTarefasConcluidas = (tarefa) => setTarefasConcluidas(prevState => [...prevState, tarefa]);
