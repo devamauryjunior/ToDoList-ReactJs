@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <form action="#" className='appForm' onSubmit={event => {
-        !tarefas.includes(novaTarefa) ? setTarefas(prevState => [...prevState, novaTarefa]) : window.alert("Tarefa existente, adicione outro :)");
+        !tarefas.includes(novaTarefa) ? setTarefas(prevState => [...prevState, novaTarefa]) : window.alert("Tarefa adicionada ou já realizada :)");
         event.preventDefault();
       }}>
         <input 
