@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './../../styles/App.css'
 import { BsArrowRight } from "react-icons/bs";
 import Tarefa from '../Tarefa';
@@ -12,16 +12,15 @@ function App() {
 
   const handleTarefasConcluidas = (tarefa) => setTarefasConcluidas(prevState => [...prevState, tarefa]);
 
-  const handleExistsInTarefas = () => {
-    
-    console.log(existsInTarefas);
-  }
-
   return (
     <div className="App">
       <form action="#" className='appForm' onSubmit={event => {
-        !tarefas.includes(novaTarefa) ? setTarefas(prevState => [...prevState, novaTarefa]) : window.alert("Tarefa adicionada ou já realizada :)");
         event.preventDefault();
+        if(!tarefas.includes(novaTarefa)) {
+          setTarefas(prevState => [...prevState, novaTarefa]);
+          return;
+        }
+        window.alert("Tarefa adicionada ou já realizada :)");
       }}>
         <input 
         type="text" 
@@ -43,7 +42,7 @@ function App() {
       <div className="appTarefasConcluidas">
         <h1 className='appTarefasConcluidas-title'>Completed</h1>
         {
-          tarefasConcluidas.map((concluidas, idx) => <TarefasConcluidas key={idx} taarefaConcluida={concluidas} />)
+          tarefasConcluidas.map((concluidas, idx) => <TarefasConcluidas key={idx} tarefaConcluida={concluidas} />)
         }
       </div>
     </div>

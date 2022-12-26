@@ -2,10 +2,10 @@ import React from "react";
 import './style.css';
 
 function TarefasConcluidas(props) {
-    const { taarefaConcluida } = props;
+    const { tarefaConcluida } = props;
     return (
         <div className="TarefasConcluidas">
-            <span className="spanTarefasConcluidas">{taarefaConcluida}</span>
+            <span className="spanTarefasConcluidas">{tarefaConcluida}</span>
         </div>
     )
 }
