@@ -36,13 +36,13 @@ function App() {
       </form>
       <div className="appTarefas">
         {
-          tarefas.map((tarefa, idx) => <Tarefa key={idx} tarefa={tarefa} handleTarefaConcluida={handleTarefasConcluidas}/>)
+          tarefas.map(tarefa => <Tarefa key={tarefa} tarefa={tarefa} handleTarefaConcluida={() => handleTarefasConcluidas(tarefa)}/>)
         }
       </div>
       <div className="appTarefasConcluidas">
         <h1 className='appTarefasConcluidas-title'>Completed</h1>
         {
-          tarefasConcluidas.map((concluidas, idx) => <TarefasConcluidas key={idx} tarefaConcluida={concluidas} />)
+          tarefasConcluidas.map(concluidas => <TarefasConcluidas key={concluidas} tarefaConcluida={concluidas} />)
         }
       </div>
     </div>
