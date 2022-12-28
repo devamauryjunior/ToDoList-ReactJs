@@ -10,7 +10,13 @@ function App() {
   
   const [tarefasConcluidas, setTarefasConcluidas] = useState([]);
 
-  const handleTarefasConcluidas = (tarefa) => setTarefasConcluidas(prevState => [...prevState, tarefa]);
+  const handleTarefasConcluidas = (tarefa) => {
+    setTarefasConcluidas(prevState => [...prevState, tarefa]);
+    const filtroTarefaConcluidaERetirarDoArrayDeTarefa = tarefas.filter(tarefasAdicionadas => {
+      return tarefasAdicionadas !== tarefa;
+    });
+    setTarefas(filtroTarefaConcluidaERetirarDoArrayDeTarefa);
+  }
 
   return (
     <div className="App">
